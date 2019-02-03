@@ -1,0 +1,223 @@
+
+/* стиль всього документу*/
+body {
+    background-image: url(fon.jpg);
+	background-attachment: fixed;
+	display: block;
+	width: 99%
+}
+
+/*фон блока, де розташовано меню*/
+nav {
+	background-image: linear-gradient(to left top, white , #052668);
+	border-top: 2px solid #0EC6CF;
+	padding: 10px;
+	position: sticky;
+	top: 2px;
+}
+
+/*подвийний фон шапки з малюнка та градієнту. перекриття з єффектом*/
+header {
+	background-image: linear-gradient(45deg, black, white), url(fon-v-shapku.png);
+	background-blend-mode:lighten;
+	background-repeat: repeat-x;
+		min-height:  219px;
+	padding-top: 1px;
+}
+
+/* стили для підвалу*/
+fotter{
+	background-image: url(fon_text.png);	
+	border-top: 2px solid #0EC6CF;
+	padding: 10px;
+	width: 100%;
+	display: block;
+
+}
+
+/*стиль для заголовка сайту */
+h1 {
+    color:#ab297b;
+    text-align: center;
+    font-size: 100px;
+   }
+
+/*стиль для назв Н2*/
+h2{
+	color: #87a9d4;
+}
+
+/*оформмлення абзацу*/
+p {
+    font-family: verdana;
+    font-size: 14px;
+      color: black;
+   
+}
+
+/*стили для блокив колонок */
+.lk, .sk, .pk {
+    width:29%;
+    float:left;
+    text-align: center;
+    min-width: 300px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #87a9d4;
+	border-radius: 20px;
+	margin: 2%;
+	padding: 10px;
+	display: block;
+	box-sizing: border-box;
+	background-image: url(fon_text.png);
+
+}
+
+/*малюнок у блоці колонок*/
+.lk img, .sk img,  .pk img{
+	width: 60%;
+}
+
+/*стиль для блока роздилювача контенту*/
+.razd {
+    with:100%;
+	
+    clear: both;
+	    background-image: url(razd.jpg);
+	background-attachment: fixed;
+	text-align: center;
+	padding: 20px;
+    
+}
+
+
+
+/*стиль малюнка з прозорістю*/
+ img.anim {
+	opacity: .6;
+	 transition: all .5s ease-in-out;
+}
+ /*зміна прозорости малюнка при наведені*/
+ img.anim:hover{
+	opacity: 1;
+	 
+}
+
+/*стиль малюнка в розділювачі*/
+
+.razd img {
+	width: 20%;
+	margin: 2%;
+	box-shadow: 0 0 85px white;
+		border-style: solid;
+	border-width: 2px;
+	border-color: #87a9d4;
+	border-radius: 20px;
+	min-width: 250px;
+
+}
+
+/* оформлення посилання*/
+
+a:link {
+  color: green; 
+  
+}
+a:visited {
+  color: #497DDD;
+}
+a:hover {
+  color: #154088; 
+ 
+}
+a:active {
+  color: red; 
+ 
+}
+
+
+
+
+
+
+
+/* стилізація  меню*/
+
+
+
+ul {
+    display: block;
+    margin: 2px;
+    padding: 0;
+    list-style: none;
+	align-self: center;
+}
+
+
+ul:after {
+    display: block;
+    content: '  ';
+    clear: both;
+    float: none;
+}
+
+
+ul.menu > li {
+    float: left;
+    position: relative;
+}
+
+
+ul.menu > li > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: dimgray;
+    text-decoration: none;
+}
+
+
+ul.menu > li > a:hover {
+    background-color:#F99618;
+}
+
+
+ul.menu > li > a:active {
+    font-size: 14px;
+}
+
+
+/*стилі для блоку випадаючого підменю */
+ul.submenu {
+    display: none;
+    position: absolute;
+    width:auto;
+	white-space: nowrap;
+    top: 35px;
+    left: 0;
+    background-color: white;
+    border: 1px solid dimgray;
+		
+}
+ul.submenu > li {
+    display: block;
+
+}
+ul.submenu > li > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: red;
+    text-decoration: none;
+}
+ul.submenu > li > a:hover {
+    text-decoration: underline;
+	background-color: #F99618;
+}
+
+/*показувати підменю при наведені на батьківський пункт меню*/
+ul.menu > li:hover > ul.submenu {
+    display: block;
+	
+}
+
